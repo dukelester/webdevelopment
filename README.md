@@ -1,4 +1,4 @@
-# WebDevelopment Projects
+# webdevelopement Projects
 
 This repository contains multiple web development projects built with different technologies such as Python, Flask, FastAPI, Node.js, Express.js, React.js, JavaScript, SQL, PostgreSQL, and more.
 
@@ -22,11 +22,11 @@ This project is a web application built with Python and Flask, and it aims to cr
 #### Usage:
 
 1. Clone the repository to your local machine:
-git clone https://github.com/dukelester/WebDevelopment.git
+git clone https://github.com/dukelester/webdevelopement.git
 
 2. Navigate to the project directory:
 
-cd WebDevelopment/project-1
+cd webdevelopement/project-1
 
 3. Install the dependencies:
 
@@ -60,10 +60,10 @@ This project is a RESTful API built with Node.js and Express.js, and it aims to 
 #### Usage:
 
 1. Clone the repository to your local machine:
-git clone https://github.com/dukelester/WebDevelopment.git
+git clone https://github.com/dukelester/webdevelopement.git
 
 2. Navigate to the project directory:
-cd WebDevelopment/project-2
+cd webdevelopement/project-2
 
 3. Install the dependencies:
 
