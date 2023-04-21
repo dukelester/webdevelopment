@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 print('Welcome to the simple flask application...')
@@ -13,7 +13,8 @@ def get_hello_world():
 
 @app.route('/users', methods=['GET', 'POST'])
 def get_users():
-    return [{
+    return [
+        {
         'name': 'Duke lester',
         'phone': '0799445562',
         'job': 'Software Engineer',
@@ -22,9 +23,9 @@ def get_users():
             'zip': 2333,
             'postal code': 62000,
             'town name': 'Kiambu, Juja',
+            },
         },
-    },
-            {
+        {
         'name': 'Kennedy Mongwa',
         'phone': '0799407662',
         'job': 'Software Engineer',
@@ -33,8 +34,8 @@ def get_users():
             'zip': 3400,
             'postal code': 92000,
             'town name': 'Mombasa',
+            },
         },
-    },
         {
         'name': 'master man',
         'phone': '0799405562',
@@ -44,8 +45,8 @@ def get_users():
             'zip': 2033,
             'postal code': 69000,
             'town name': 'Kampala',
+            },
         },
-    },          
         {
         'name': 'Jason Kimani',
         'phone': '079945562',
@@ -61,6 +62,7 @@ def get_users():
 
 @app.route('/users/<int:user_id>')
 def get_user_details(user_id: int):
+    company = request.args['company']
     print('user id', user_id)
     return {
         'userId': user_id,
@@ -73,4 +75,26 @@ def get_user_details(user_id: int):
             'postal code': 62000,
             'town name': 'Kiambu, Juja',
         },
+        'company': company,
     }
+
+@app.route('/user', methods=['POST', 'GET'])
+def create_user():
+    return { 'message': 'Created a Post request to create a user' }
+
+@app.route('/add-comment', methods=["GET", "POST"])
+def add_comment():
+    if request.method == 'POST':
+        print(request.form)
+        title = request.form['title']
+        body = request.form['body']
+        name = request.form['name']
+        return { 'title': title, 'body': body, 'name': name }
+    return '''
+        <form method='post'>
+        <input type="text" placeholder="comment title" name="title" required/> 
+        <input type="text" placeholder="comment body" name="body" required/> 
+        <input type="text" placeholder="your name" name="name" required/> 
+        <button>Save </button>
+        </form>
+    '''
