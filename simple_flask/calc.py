@@ -2,6 +2,7 @@
 to get the numbers to calculate with.
 '''
 from flask import Flask, request
+import operator
 
 app = Flask(__name__)
 
@@ -72,3 +73,30 @@ def division():
             <input type="number" required name="second_number"/>
             <button> Calculate Now! </button>
     '''
+
+@app.route('/math/<oper>')
+def do_calculation(oper):
+    """ Do the calculation """
+    result = 0
+    number_1 = request.args.get('num1')
+    number_2 = request.args.get('num2')
+    print(number_2, number_1)
+    if oper == 'add':
+        result = operator.add(int(number_1), int(number_2))
+        print(result)
+    elif oper == 'sub':
+        result = operator.sub(int(number_1), int(number_2))
+        print(result)
+    elif oper == 'mul':
+        result = operator.mul(int(number_1), int(number_2))
+        print(result)
+    elif oper == 'div':
+        result = operator.floordiv(int(number_1), int(number_2))
+        print(result)
+    elif oper == 'mod':
+        result = operator.mod(int(number_1), int(number_2))
+        print(result)
+    else:
+        return 'invalid operation'
+    return str(result)
+    
