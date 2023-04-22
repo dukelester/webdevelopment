@@ -84,11 +84,12 @@ def create_user():
 
 @app.route('/add-comment', methods=["GET", "POST"])
 def add_comment():
+    ''' Add a comment '''
     if request.method == 'POST':
         print(request.form)
-        title = request.form['title']
-        body = request.form['body']
-        name = request.form['name']
+        title: str = request.form['title']
+        body: str = request.form['body']
+        name: str = request.form['name']
         return { 'title': title, 'body': body, 'name': name }
     return '''
         <form method='post'>
