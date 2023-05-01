@@ -15,18 +15,18 @@ def get_story():
 @app.route('/form', methods=["POST", "GET"])
 def get_answers():
     ''' Get the inputs from the form '''
-    if request.method == 'POST':
-        place = request.form['place']
-        noun = request.form['noun']
-        verb = request.form['verb']
-        adjective = request.form['adjective']
-        plural_noun = request.form['plural_noun']
-        if place and noun and verb and adjective and plural_noun:
-            result_story = story.generate({
-                'place': place, 'noun': noun,
-                'verb': verb, 'adjective': adjective,
-                'plural_noun': plural_noun,
-            })
-            return render_template('story.html', story=result_story)
-        return render_template('form.html', message='Please provide all the game details!!')
-    return render_template('form.html')
+    if request.method != 'POST':
+        return render_template('form.html')
+    place = request.form['place']
+    noun = request.form['noun']
+    verb = request.form['verb']
+    adjective = request.form['adjective']
+    plural_noun = request.form['plural_noun']
+    if place and noun and verb and adjective and plural_noun:
+        result_story = story.generate({
+            'place': place, 'noun': noun,
+            'verb': verb, 'adjective': adjective,
+            'plural_noun': plural_noun,
+        })
+        return render_template('story.html', story=result_story)
+    return render_template('form.html', message='Please provide all the game details!!')
