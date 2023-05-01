@@ -13,11 +13,12 @@ body {
 }
 button {
     width: 200px;
-    background-color: rgb(0, 53, 0);
+    background-color: darkcyan;
     border-radius: 5px;
     height: 50px;
-    border: rgb(4, 75, 4);
+    border: darkcyan;
     color: white;
+    font-size: 18px;
 }
 button > a {
     text-decoration: none;
@@ -28,7 +29,7 @@ button > a {
 }
 
 button:hover {
-    background-color: rgb(3, 100, 11);
+    background-color: rgb(7, 110, 110);
 }
 
 img {
@@ -48,4 +49,37 @@ p {
     align-content: center;
     padding: 10px;
     margin: 10px;
+}
+
+form {
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+}
+
+input {
+    width: 400px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(226, 233, 231);
+}
+
+ul {
+    list-style: none;
+    width: 200px;
+
+}
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    font-weight: 500;
+    font-size: large;
+    color: cornflowerblue;
 }

@@ -4,7 +4,25 @@
 
 {% block content %}
    <body>
+       <h2> Submit the answers to the Madlib Game </h2>
        
+       <div>
+        <form method="POST">
+            <label for="place"> Enter the place</label>
+            <input type="text" name="place" required>
+            <label for="noun"> Enter the Noun</label>
+            <input type="text" name="noun" required>
+            <label for="verb"> Enter the Verb</label>
+            <input type="text" name="verb" required>
+            <label for="adjective"> Enter the Adjective</label>
+            <input type="text" name="adjective" required>
+            <label for="plural_noun"> Enter the Plural Noun</label>
+            <input type="text" name="plural_noun" required>
+            
+            <button type="submit"> Submit </button>
+        </form>
+        
+       </div>
        <script src="" async defer></script>
    </body>
    {% endblock %}
