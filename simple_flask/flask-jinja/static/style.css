@@ -8,3 +8,21 @@
 *:hover {
     color: chartreuse;
 }
+
+h2 {
+    color: red;
+}
+
+button {
+    color: white;
+    background-color: darkgreen;
+    width: 200px;
+    border-radius: 6px;
+    margin: 10px 10px;
+    font-size: 18px;
+    height: 40px;
+}
+
+button:hover{
+    background-color: darkgrey;
+}

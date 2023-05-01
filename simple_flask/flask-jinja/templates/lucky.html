@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Lucky Number</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/style.css">
-    </head>
+{% block title %} 
+<title> Lucky Number </title>
+{% endblock %}
+{% extends 'base.html' %}
+{% block content %}
     <body>
       <h3> Your lucky number is :: {{ lucky_number }}</h3>
       <ul>
@@ -16,6 +11,6 @@
           {% endfor %}
       </ul>
         
-        <script src="" async defer></script>
+        <script src="static/js/lucky.js" async defer></script>
     </body>
-</html>
+{% endblock %}
