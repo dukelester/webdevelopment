@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home</title>
+        <title>Lucky Number</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="static/style.css">
     </head>
     <body>
-    <h2> Welcome to our home page </h2>
+      <h3> Your lucky number is :: {{ lucky_number }}</h3>
+      <ul>
+        {% for num in range(lucky_number) %}
+        <li> <h5>{{ num }} </h5> </li>
+          {% endfor %}
+      </ul>
+        
         <script src="" async defer></script>
-        <!-- ========== Start Section ========== -->
-        <section> 
-            <h3> {{ 89 + 34 }} </h3>
-        </section>
-        <!-- ========== End Section ========== -->
     </body>
 </html>

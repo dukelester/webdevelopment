@@ -1,0 +1,10 @@
+* {
+    padding: 0%;
+    color: olivedrab;
+    background-color: darkslategrey;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+*:hover {
+    color: chartreuse;
+}
